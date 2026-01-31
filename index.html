@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Scan Verification 😂</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>🕵️ Can I scan you?</h1>
+<p>Are you sure you are Mama ka beta? 😏</p>
+
+<div class="progress-box">
+    <div class="progress" id="bar"></div>
+</div>
+
+<div id="status">Starting scan...</div>
+
+<a href="page2.html" class="nextBtn" id="nextBtn">NEXT ➜</a>
+
+</div>
+
+<script>
+let width = 0;
+let bar = document.getElementById("bar");
+let status = document.getElementById("status");
+let btn = document.getElementById("nextBtn");
+
+let scan = setInterval(() => {
+    width += 8;
+    bar.style.width = width + "%";
+
+    if(width == 24) status.innerHTML = "Checking face data 😂";
+    if(width == 48) status.innerHTML = "Matching with Mama records 📂";
+    if(width == 72) status.innerHTML = "Verifying laziness level 😴";
+    if(width == 96) status.innerHTML = "Almost caught 😎";
+
+    if(width >= 100){
+        clearInterval(scan);
+        status.innerHTML = "✅ Verified: Real Mama ka beta";
+        btn.style.display = "inline-block";
+    }
+}, 300);
+</script>
+
+</body>
+</html>

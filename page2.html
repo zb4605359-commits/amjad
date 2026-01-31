@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ultimate Check 😂</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="card" id="card">
+
+<h2>🎁 Come To My Home</h2>
+<p>Sach bolo — aa rahe ho? 😏</p>
+
+<button onclick="yesClick()">YES pakka 😎</button>
+<button id="noBtn" onmouseover="moveBtn()">Nahi 😅</button>
+
+<div class="meter">
+<div class="fill" id="bar"></div>
+</div>
+
+<div id="result"></div>
+
+<a id="nextLink" href="page3.html" style="display:none;">
+<button>Final Entry ➜</button>
+</a>
+
+</div>
+
+<audio id="sound">
+<source src="https://www.soundjay.com/buttons/sounds/button-09.mp3">
+</audio>
+
+<script>
+function yesClick(){
+    document.getElementById("sound").play();
+
+    document.getElementById("bar").style.width = "100%";
+
+    document.getElementById("result").innerHTML =
+    "😂 Scanner bol raha hai: Jhoot allowed nahi ";
+
+    document.getElementById("nextLink").style.display = "block";
+}
+
+function moveBtn(){
+    let btn = document.getElementById("noBtn");
+    btn.style.position = "absolute";
+    btn.style.left = Math.random()*250 + "px";
+    btn.style.top = Math.random()*200 + "px";
+}
+</script>
+
+</body>
+</html>
